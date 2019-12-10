@@ -1,1 +1,8 @@
-<p>overview works!</p>
+<app-nav></app-nav>
+
+<mat-grid-list cols="4" >
+    <mat-grid-tile   colspan="1" rowspan="1" background="'red'">
+      <app-latest-measurement [measurement]="measurement" ></app-latest-measurement>
+    </mat-grid-tile>
+    
+  </mat-grid-list>

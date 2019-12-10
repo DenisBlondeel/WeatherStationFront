@@ -1,0 +1,24 @@
+mat-card{
+    background: #3f51b5;
+    color: white;
+    text-shadow: -1px 0 #2E3A82, 0 1px #2E3A82, 1px 0 #2E3A82, 0 -1px #2E3A82;
+    width: 100%;
+    height: 100%;
+
+}
+
+.header {
+    background-image: url('../../../Leuven.jpg');
+    background-size: cover;
+  }
+
+mat-card-subtitle{
+    color: white;
+}
+
+.main-measurement{
+    font-size: xx-large;
+}
+.sub-measurement{
+    font-size: x-large;
+}

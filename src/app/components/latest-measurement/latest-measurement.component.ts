@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { Measurement } from 'src/app/model/measurement';
+
 
 @Component({
   selector: 'app-latest-measurement',
@@ -7,7 +9,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LatestMeasurementComponent implements OnInit {
 
+  @Input() measurement: Measurement
+
   constructor() { }
+
+
 
   ngOnInit() {
   }

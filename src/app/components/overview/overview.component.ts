@@ -1,4 +1,13 @@
 import { Component, OnInit } from '@angular/core';
+import { MeasurementService } from 'src/app/services/measurement.service';
+import { Measurement } from 'src/app/model/measurement';
+
+export interface Tile {
+  color: string;
+  cols: number;
+  rows: number;
+  text: string;
+}
 
 @Component({
   selector: 'app-overview',
@@ -7,9 +16,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class OverviewComponent implements OnInit {
 
-  constructor() { }
+  constructor(public service: MeasurementService) { }
 
-  ngOnInit() {
+  measurement: Measurement;
+
+  ngOnInit() 
+  {
+    this.service.getLastMeasurement().subscribe(
+
+      (result)=> {this.measurement = result; console.log(result);
+      })
   }
 
 }
